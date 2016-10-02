@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "cities#index"
   # Routes for the Tag_catalogue resource:
   # CREATE
   get "/tag_catalogues/new", :controller => "tag_catalogues", :action => "new"
