@@ -17,7 +17,7 @@
 
       <% @restaurant_tags.each do |restaurant_tag| %>
       <tr>
-        <td><%= restaurant_tag.restaurant_id %></td>
+        <td><%= restaurant_tag.restaurant.name %></td>
         <td><%= restaurant_tag.user_id %></td>
         <td><%= restaurant_tag.tag_id %></td>
         <td>
