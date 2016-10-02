@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h3>Restaurant Owner #<%= @restaurant_owner.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Name</dt>
+      <dd><%= @restaurant_owner.name %></dd>
+
+      <dt>Last name</dt>
+      <dd><%= @restaurant_owner.last_name %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/restaurant_owners" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/restaurant_owners/<%= @restaurant_owner.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_restaurant_owner/<%= @restaurant_owner.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
