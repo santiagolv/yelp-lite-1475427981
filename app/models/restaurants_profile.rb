@@ -1,6 +1,11 @@
 class RestaurantsProfile < ApplicationRecord
   # Direct associations
 
+  has_many   :tags,
+             :class_name => "RestaurantTag",
+             :foreign_key => "restaurant_id",
+             :dependent => :destroy
+
   has_many   :restaurant_ownerships,
              :foreign_key => "restaurant_id",
              :dependent => :destroy
