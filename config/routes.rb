@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Tag_catalogue resource:
+  # CREATE
+  get "/tag_catalogues/new", :controller => "tag_catalogues", :action => "new"
+  post "/create_tag_catalogue", :controller => "tag_catalogues", :action => "create"
+
+  # READ
+  get "/tag_catalogues", :controller => "tag_catalogues", :action => "index"
+  get "/tag_catalogues/:id", :controller => "tag_catalogues", :action => "show"
+
+  # UPDATE
+  get "/tag_catalogues/:id/edit", :controller => "tag_catalogues", :action => "edit"
+  post "/update_tag_catalogue/:id", :controller => "tag_catalogues", :action => "update"
+
+  # DELETE
+  get "/delete_tag_catalogue/:id", :controller => "tag_catalogues", :action => "destroy"
+  #------------------------------
+
   # Routes for the Restaurant_tag resource:
   # CREATE
   get "/restaurant_tags/new", :controller => "restaurant_tags", :action => "new"
