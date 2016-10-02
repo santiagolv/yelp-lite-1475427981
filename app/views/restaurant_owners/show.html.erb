@@ -26,3 +26,43 @@
     </div>
   </div>
 </div>
+
+<!-- A Restaurant owner has many restaurant_ownerships -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Restaurant_ownerships
+      </li>
+
+      <% @restaurant_owner.restaurant_ownerships.each do |restaurant_ownership| %>
+        <li class="list-group-item">
+          <a href="/restaurant_ownerships/<%= restaurant_ownership.id %>">
+            <%= restaurant_ownership.restaurant_owner_id %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A Restaurant owner has many review_replies -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Review_replies
+      </li>
+
+      <% @restaurant_owner.review_replies.each do |review_reply| %>
+        <li class="list-group-item">
+          <a href="/review_replies/<%= review_reply.id %>">
+            <%= review_reply.review_id %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
