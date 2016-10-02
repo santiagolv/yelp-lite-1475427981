@@ -1,6 +1,8 @@
 class RestaurantTag < ApplicationRecord
   # Direct associations
 
+  belongs_to :user
+
   belongs_to :restaurant,
              :class_name => "RestaurantsProfile"
 
